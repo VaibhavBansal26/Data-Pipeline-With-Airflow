@@ -7,4 +7,11 @@ In this project, Need to create custom operators to perform tasks such as stagin
 
 ![Description](./airflow/images/flow.png)
 
+
 Main file -> Airflow -> dags
+
+Copying Data from S3
+Configuring Redshift
+Configuring Airflow
+Setting Up Airflow Connections with AWS 
+Creating the Dag
