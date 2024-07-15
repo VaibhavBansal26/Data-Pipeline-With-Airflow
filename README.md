@@ -10,8 +10,15 @@ In this project, Need to create custom operators to perform tasks such as stagin
 
 Main file -> Airflow -> dags
 
-Copying Data from S3
-Configuring Redshift
-Configuring Airflow
-Setting Up Airflow Connections with AWS 
-Creating the Dag
+Other file -> Airflow -> Plugins ->  1. helpers
+                                     2. operators
+
+- Copying Data from S3
+
+- Configuring Redshift
+
+- Configuring Airflow
+
+- Setting Up Airflow Connections with AWS 
+
+- Creating the Dag
