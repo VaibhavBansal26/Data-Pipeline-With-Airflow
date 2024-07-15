@@ -24,8 +24,8 @@ class LoadFactOperator(BaseOperator):
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
         
         if not self.append_only:
-            self.log.info("Delete {} fact table".format(self.table))
-            redshift.run("DELETE FROM {}".format(self.table))  
+            self.log.info("Truncate {} fact table".format(self.table))
+            redshift.run("TRUNCATE TABLE {}".format(self.table))  
             
         self.log.info("Inserting data from staging tables into {} fact table".format(self.table))
         

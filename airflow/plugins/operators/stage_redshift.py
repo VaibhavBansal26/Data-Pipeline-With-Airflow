@@ -5,6 +5,7 @@ from airflow.utils.decorators import apply_defaults
 
 
 class StageToRedshiftOperator(BaseOperator):
+    template_fields = ("s3_path",)
     copy_sql_date = """
         COPY {} 
         FROM '{}/{}/{}/'
@@ -48,7 +49,7 @@ class StageToRedshiftOperator(BaseOperator):
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
 
         self.log.info("Clearing data from the redshift table")
-        redshift.run("DELETE FROM {}".format(self.table))
+        redshift.run("TRUNCATE TABLE {}".format(self.table))
 
         self.log.info("Copying data from S3 to Redshift")      
     
