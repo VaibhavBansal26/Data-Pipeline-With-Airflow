@@ -6,3 +6,5 @@ A music streaming company, Sparkify, has decided that it is time to introduce mo
 In this project, Need to create custom operators to perform tasks such as staging the data, filling the data warehouse, and running checks on the data as the final step.
 
 ![Description](./airflow/images/flow.png)
+
+Main file -> Airflow -> dags
